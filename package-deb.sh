@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Only continue if binary files are available
+if [ ! -f build/apfs-fuse ] || [ ! -f build/apfsutil ]; then
+  echo "Please compile first before trying to package."
+  exit 1
+fi
+
 read -p "Enter package name (characters allowed: a-z A-z 0-9 _ -): " package
 read -p "Enter version (e.g. 1.0.0): " version
 read -p "Enter revision (e.g. 1): " revision
