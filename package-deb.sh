@@ -7,10 +7,10 @@ if [ ! -f build/apfs-fuse ] || [ ! -f build/apfsutil ]; then
 fi
 
 # Only package if we are on a supported system
-arch=$(arch)
+arch="$(arch)"
 if [ "$arch" == "x86_64" ] || [ "$arch" == "amd64" ]; then
   arch="amd64"
-else if [ "$arch" == "arm64" ] || [ "$arch" == "aarch64" ]; then
+elif [ "$arch" == "arm64" ] || [ "$arch" == "aarch64" ]; then
   arch="aarch64"
 else
   echo "This architecture, $arch, is not supported at this time."
