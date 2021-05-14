@@ -2,7 +2,7 @@
 
 # Only continue if binary files are available
 if [ ! -f build/apfs-fuse ] || [ ! -f build/apfsutil ]; then
-  echo "Please compile first before trying to package."
+  echo "Please compile first before trying to package to deb."
   exit 1
 fi
 
