@@ -15,10 +15,8 @@ if [ -n "${to_install[*]}" ]; then
 fi
 
 # continue with compilation
-cd apfs-fuse
 git submodule init
 git submodule update
 mkdir -p build
 cd build
-ccmake ..
 make
