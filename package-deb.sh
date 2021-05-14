@@ -23,7 +23,7 @@ read -p "Enter revision (e.g. 1): " revision
 read -p "Enter maintainer (name and email): " maintainer
 read -p "Enter description (use \"\n \" for newlines): " description
 
-fullpackage="${package}_${version}-${revision}"
+fullpackage="${package}_${version}-${revision}_${arch}"
 mkdir -p "${fullpackage}"
 mkdir -p "${fullpackage}/usr"
 mkdir -p "${fullpackage}/usr/local"
