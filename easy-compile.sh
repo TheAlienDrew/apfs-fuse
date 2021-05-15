@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # install any requires packages first
-required_packages=(cmake gcc g++ fuse libfuse-dev bzip2 libbz2-dev libattr1-dev zlib1g-dev libicu-dev)
+required_packages=("cmake" "gcc" "g++" "fuse" "libfuse-dev" "bzip2" "libbz2-dev" "libattr1-dev" "zlib1g-dev" "libicu-dev")
 to_install=()
 for package in "${required_packages[@]}"; do
   dpkg -L $package >/dev/null 2>&1
