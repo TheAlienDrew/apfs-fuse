@@ -44,7 +44,7 @@ echo "Priority: optional" >> "${debcontrol}"
 echo "Architecture: $arch" >> "${debcontrol}"
 echo "Depends: fuse, bzip2" >> "${debcontrol}"
 echo "Maintainer: ${maintainer}" >> "${debcontrol}"
-echo -e "Description: ${description}" >> "${debcontrol}"
+echo "Description: $(echo -e "$description")" >> "${debcontrol}"
 
 dpkg-deb --build "${fullpackage}"
 chmod +x "${fullpackage}.deb"
